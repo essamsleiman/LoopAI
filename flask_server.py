@@ -6,8 +6,8 @@ import undetected_chromedriver as uc
 import difflib
 from bs4 import BeautifulSoup
 import os
-# openai.api_key = "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"
-openai.api_key =  "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"
+# openai.api_key = ""
+openai.api_key =  ""
 sample_url = 'https://www.walmart.com/ip/Grianlook-Mens-Fashion-Waffle-T-Shirts-Henley-Neck-Solid-Color-Pullover-Work-Long-Sleeve-T-shirt-Red-wine-2XL/1000446518'
 
 app = Flask(__name__)
@@ -130,7 +130,7 @@ import json
 
 def extract_characteristic(data):
     # data = request.get_json()  # Assuming the request contains JSON data
-    openai.api_key =  "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"
+    openai.api_key =  ""
     print("begin call")
 
     response_step_1 = openai.ChatCompletion.create(
@@ -192,7 +192,7 @@ def set_url():
 
 @app.route('/query', methods=['POST'])
 def query():
-    openai.api_key =  "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"
+    openai.api_key =  ""
 
     data = request.get_json()  # Assuming the request contains JSON data
     
